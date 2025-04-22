@@ -1,0 +1,56 @@
+/* 
+
+  Unidad de Medida fr
+
+  Esta unidad nos permite fraccionar nuestra grilla o grid en fracciones. 
+
+  Se utiliza en las propiedades grid-template-columns y grid-template-rows.
+
+  Le indicamos el valor de la fracción y la cantidad de filas y columnas, separdas por un espacio.
+
+    grid-template-columns: 1fr 1fr 1fr; -> Crea 3 columnas que mediran 1 fración del espacio disponible del contenedor.
+
+    grid-template-rows: 1fr 2fr; -> Crea 2 filas, la primera mide 1 fracción del espacio disponible y la segunda el doble o 2 fracciones del espacio disponible.
+
+  Función repeat()
+
+  La función repeat nos permite  repetir un numero determinado de filas y columnas en CSS Grid.
+
+    repeat()
+
+  Le indicamos el numero de repeticiones y el valor de medida, separado por una ','
+
+    repeat( repeticiones, medida );
+    repeat( 3 , 1fr );
+
+  Esta función se pasa como valor de las propiedades grid-template-column y grid-template rows.
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+
+  /* grid-template-columns: 1fr 1fr 1fr ; */
+  /* grid-template-rows: 1fr 2fr 3fr; */
+
+  grid-template-columns: repeat(12, 100px);
+  grid-template-rows: repeat(3, 1fr);
+
+  background-color: lightsalmon;
+}
+
+.item {
+  color: whitesmoke;
+  background-color: darkslateblue;
+}
