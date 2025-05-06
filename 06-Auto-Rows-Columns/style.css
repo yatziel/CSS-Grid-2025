@@ -1,0 +1,39 @@
+/* 
+
+  Grid Auto Rows y Grid Auto Columns
+
+  Controlan como se añaden las filas y columnas en la grilla implicita, es decir cuando no se añadieron explicitamente.
+
+    grid-auto-rows: valor; (px, %, fr, em, rem)
+    grid-auto-columns: valor; (px, %, fr, em, rem)
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 12px;
+
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  gap: 12px;
+  grid-auto-rows: 200px;
+  grid-auto-flow: column;
+  grid-auto-columns: 50px;
+
+  background-color: darkslateblue;
+}
+
+.item {
+  background-color: lightcoral;
+}
